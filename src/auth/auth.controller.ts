@@ -12,7 +12,7 @@ import { UserRoleGuard } from './guards/user-role/user-role.guard';
 import { ValidRoles } from './interfaces/valid-roles';
 
   
-@ApiTags('Auth')
+// @ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
