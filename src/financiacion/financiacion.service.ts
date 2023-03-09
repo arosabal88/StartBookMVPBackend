@@ -1,13 +1,27 @@
 import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
 import { CreateFinanciacionDto } from './dto/create-financiacion.dto';
 import { UpdateFinanciacionDto } from './dto/update-financiacion.dto';
+import { Financiacion } from './entities/financiacion.entity';
 
 @Injectable()
 export class FinanciacionService {
-  create(createFinanciacionDto: CreateFinanciacionDto) {
-    return 'This action adds a new financiacion';
-  }
-
+  constructor(
+    @InjectModel( Financiacion.name )
+    private readonly financiacionModel: Model<Financiacion>,
+    ) {}
+  // -----------------------------------------------------
+    async create(createFinanciacionDto: CreateFinanciacionDto) {
+      try {
+        const empleoCreated = await this.financiacionModel.create(createFinanciacionDto);
+        return 'Financiacion creado!!!'; 
+      } catch (error) {
+        console.log(error);
+        // this.handleExceptions( error );
+      }
+    }
+// -----------------------------------------------------
   findAll() {
     return `This action returns all financiacion`;
   }

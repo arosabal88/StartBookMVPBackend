@@ -21,6 +21,6 @@ export class CreateFinanciacionDto  {
 
     @ApiProperty()
     @IsBoolean()
-    busqueda_inversion:string;  
+    busqueda_inversion:boolean;  
 
 }
