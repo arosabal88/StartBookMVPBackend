@@ -19,7 +19,7 @@ import { FinanciacionModule } from './financiacion/financiacion.module';
     }),
     AuthModule,
     //MongooseModule.forRoot(process.env.MONGO_DB),
-     MongooseModule.forRoot(process.env.MONGODB),
+     MongooseModule.forRoot(process.env.MONGODB_CNN),
     EmpresasModule,
     EmpleosModule,
     FinanciacionModule,
