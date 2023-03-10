@@ -26,15 +26,6 @@ export class CreateUserDto {
     fullName:string;
     
 
-    @ApiProperty()
-    @IsString()
-    medicalRecord:string
     
-    @ApiProperty()
-    @IsString()
-    healthEntity:string
-
-
-      
 
 }
