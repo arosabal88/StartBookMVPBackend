@@ -15,16 +15,16 @@ import { ValidRoles } from './interfaces/valid-roles';
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
   
-  @ApiExcludeEndpoint() 
+   
   @Post('register')
-  // @ApiResponse({status: 201, description:'User Created',type: User})
+  @ApiResponse({status: 201, description:'User Created',type: User})
   @ApiResponse({status: 201, description:'User Created'})
   @ApiResponse({status:400 , description: 'Bad Request'})
   @ApiResponse({status: 403 , description :'Forbidden'})
   create(@Body() createUserDto: CreateUserDto) {
     return this.authService.create(createUserDto);
   }
-  @ApiExcludeEndpoint() 
+  
   @Post('login')
   @ApiResponse({status: 201, description:'Login succesfully'})
   @ApiResponse({status:400 , description: 'Bad Request'})

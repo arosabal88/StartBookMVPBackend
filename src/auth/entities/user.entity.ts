@@ -14,13 +14,7 @@ export class User extends Document {
     })
     fullName:string;
     
-    @Prop({
-        unique: true,
-        index:true
-    })
-    medicalRecord:string;
-
-     
+       
     @Prop({
         unique: true,
         index:true
@@ -34,10 +28,7 @@ export class User extends Document {
     password:string;
     
      
-    @Prop()
-    healthEntity:string;
-
-     
+       
     @Prop({
         default: true,
         

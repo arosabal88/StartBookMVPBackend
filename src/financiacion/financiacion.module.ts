@@ -16,3 +16,4 @@ import { Financiacion, FinanciacionSchema } from './entities/financiacion.entity
   
 })
 export class FinanciacionModule {}
+
